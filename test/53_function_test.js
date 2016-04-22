@@ -8,6 +8,11 @@ var length = require('../length');
 var upper = require('../upper');
 var reverse = require('../reverse');
 var hello_list = require('../hello_list');
+var high_low = require('../high_low');
+var count_words = require('../count_words');
+var sum_words_len = require('../sum_words_len');
+var longest_word = require('../longest_word');
+var shortest_word = require('../shortest_word');
 
 
 
@@ -60,5 +65,59 @@ describe("53 function using node js", function(){
     assert.deepEqual( hello_list(7), ["hello world", "hello world", "hello world", "hello world", "hello world", "hello world", "hello world"]);
   });
 
+  it("should returns the highest and lowest numbers in the list", function(){
 
+    assert.deepEqual( high_low.high([1,2,3,4,5,6,7,8,9,10]), 10);
+    assert.deepEqual( high_low.low([1,2,3,4,5,6,7,8,9,10]), 1);
+  });
+
+  it("should returns the number of words in the sentence", function(){
+
+    assert.equal( count_words("It cost nothing to be nice"), 6);
+  });
+
+  it("should returns the sum of the length of words in it", function(){
+
+    assert.equal( sum_words_len("I feel lazy today"), 17);
+  });
+
+  it("should returns the longest word in the sentence, and the length of the word", function(){
+
+    assert.equal( longest_word("Nomawethu Ntombi Nomvula"), 'Nomawethu 9');
+  })
+
+  it("should returns the shortest word in the sentence, and the length of the word", function(){
+
+    assert.equal( shortest_word("Nomawethu Ntombi Nomvula"), 'Ntombi 6')
+  })
+
+  it("should returns", function(){
+
+    assert.
+  })
+  
+  // it("should returns", function(){
+  //
+  //   assert.
+  // })
+  //
+  // it("should returns", function(){
+  //
+  //   assert.
+  // })
+  //
+  // it("should returns", function(){
+  //
+  //   assert.
+  // })
+  //
+  // it("should returns", function(){
+  //
+  //   assert.
+  // })
+  //
+  // it("should returns", function(){
+  //
+  //   assert.
+  // })
 });
